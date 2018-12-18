@@ -1,0 +1,48 @@
+1543474182905	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.e1wTaeMnGZf9"
+1543474184808	addons.xpi-utils	WARN	addMetadata: Add-on langpack-en-ZA@firefox.mozilla.org is invalid: Error: Install manifest specifies unknown type: null(resource://gre/modules/addons/XPIInstall.jsm:632:11) JS Stack trace: loadManifestFromRDF@XPIInstall.jsm:632:11
+loadFromRDF@XPIInstall.jsm:787:23
+awaitPromise@XPIProvider.jsm:190:3
+syncLoadManifestFromFile@XPIInstall.jsm:870:10
+addMetadata@XPIDatabase.jsm:2395:21
+processFileChanges@XPIDatabase.jsm:2736:21
+checkForChanges@XPIProvider.jsm:2556:34
+startup@XPIProvider.jsm:2134:25
+callProvider@AddonManager.jsm:206:12
+_startProvider@AddonManager.jsm:654:5
+startup@AddonManager.jsm:807:9
+startup@AddonManager.jsm:2802:5
+observe@addonManager.js:66:9
+1543474184808	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+1543474184853	addons.xpi-utils	WARN	addMetadata: Add-on langpack-en-GB@firefox.mozilla.org is invalid: Error: Install manifest specifies unknown type: null(resource://gre/modules/addons/XPIInstall.jsm:632:11) JS Stack trace: loadManifestFromRDF@XPIInstall.jsm:632:11
+loadFromRDF@XPIInstall.jsm:787:23
+awaitPromise@XPIProvider.jsm:190:3
+syncLoadManifestFromFile@XPIInstall.jsm:870:10
+addMetadata@XPIDatabase.jsm:2395:21
+processFileChanges@XPIDatabase.jsm:2736:21
+checkForChanges@XPIProvider.jsm:2556:34
+startup@XPIProvider.jsm:2134:25
+callProvider@AddonManager.jsm:206:12
+_startProvider@AddonManager.jsm:654:5
+startup@AddonManager.jsm:807:9
+startup@AddonManager.jsm:2802:5
+observe@addonManager.js:66:9
+1543474184854	addons.xpi-utils	WARN	Could not uninstall invalid item from locked install location
+JavaScript error: resource://gre/modules/addons/XPIProvider.jsm, line 2600: TypeError: addon is null
+1543474188267	Marionette	INFO	Listening on port 45241
+1543474188326	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:721:13
+
+[Parent 10568, Gecko_IOThread] WARNING: pipe error (97): Connection reset by peer: file /build/firefox-Qjvn2X/firefox-63.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 356
+[Parent 10568, Gecko_IOThread] WARNING: pipe error (96): Connection reset by peer: file /build/firefox-Qjvn2X/firefox-63.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 356
+1543474268850	Marionette	INFO	Stopped listening on port 45241
+1543484665458	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.8FG41JiHZhht"
+1543484668280	Marionette	INFO	Listening on port 39949
+1543484668289	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 3347, Gecko_IOThread] WARNING: pipe error (77): Connection reset by peer: file /build/firefox-Qjvn2X/firefox-63.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 356
+1543484718110	Marionette	INFO	Stopped listening on port 39949
