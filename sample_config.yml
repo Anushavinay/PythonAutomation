@@ -1,0 +1,9 @@
+TestBeds:
+  # A test bed where adb will find Android devices.
+  - Name: SampleTestBed
+    Controllers:
+        #AndroidDevice: '*'
+      AndroidDevice:
+        - serial: 804KPJP1745388
+         # phone_number: 123456
+        - serial: 58H3Y18720000261
