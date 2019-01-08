@@ -14,7 +14,7 @@ Setup chromedriver
     appium  --chromedriver-executable    /home/anusha/Downloads/chromedriver
 Demo
     [Documentation]    Documentation demo for appium library
-    Open Application    http://localhost:4723/wd/hub    platformName=Android     platformVersion=9    deviceName=Pixel_2_XL_API_28    browserName=chrome
+    Open Application    http://localhost:4723/wd/hub    platformName=Android     platformVersion=7.0    deviceName=LGH870DSb70467e2    browserName=chrome
     Go To Url    https://facebook.com
     Sleep  25s
     Wait Until Page Contains Element    xpath=//input[@type='email']

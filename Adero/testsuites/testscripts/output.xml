@@ -1,64 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20181218 14:19:23.985" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
-<suite source="/home/anusha/PycharmProjects/Adero/testsuites/testscripts/demoapp.robot" id="s1" name="Demoapp">
+<robot generated="20181219 14:18:20.912" generator="Robot 3.0.4 (Python 2.7.12 on linux2)">
+<suite source="/home/anusha/PycharmProjects/Adero/testsuites/testscripts/ValidEmailSubscibe.robot" id="s1" name="ValidEmailSubscibe">
 <test id="s1-t1" name="LAUNCH APPLICATION">
-<kw name="Demo">
-<doc>Documentation demo for appium library</doc>
-<kw name="Open Application" library="AppiumLibrary">
-<doc>Opens a new application to given Appium server.</doc>
+<kw name="Home Page" library="resources_web_validEmail">
+<doc>1)To validate valid email subscription</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
-<arg>http://localhost:4723/wd/hub</arg>
-<arg>platformName=Android</arg>
-<arg>platformVersion=9</arg>
-<arg>deviceName=Pixel_2_XL_API_28</arg>
-<arg>browserName=chrome</arg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER_NAME}</arg>
 </arguments>
-<status status="PASS" endtime="20181218 14:19:30.175" starttime="20181218 14:19:24.865"></status>
+<msg timestamp="20181219 14:18:21.151" level="INFO">Opening browser 'chrome' to base url 'https://www.adero.com/'.</msg>
+<status status="PASS" endtime="20181219 14:18:43.336" starttime="20181219 14:18:21.150"></status>
 </kw>
-<kw name="Go To Url" library="AppiumLibrary">
-<doc>Opens URL in default web browser.</doc>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
-<arg>https://facebook.com</arg>
+<arg>5</arg>
 </arguments>
-<status status="PASS" endtime="20181218 14:19:36.244" starttime="20181218 14:19:30.175"></status>
+<status status="PASS" endtime="20181219 14:18:43.337" starttime="20181219 14:18:43.337"></status>
 </kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181219 14:18:43.447" starttime="20181219 14:18:43.338"></status>
+</kw>
+<status status="PASS" endtime="20181219 14:18:43.447" starttime="20181219 14:18:21.150"></status>
+</kw>
+<kw name="Subscribe Email" library="resources_web_validEmail">
+<doc>1)To subscribe under email popup at the start of the home page</doc>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>25s</arg>
 </arguments>
-<msg timestamp="20181218 14:20:01.244" level="INFO">Slept 25 seconds</msg>
-<status status="PASS" endtime="20181218 14:20:01.245" starttime="20181218 14:19:36.244"></status>
+<msg timestamp="20181219 14:19:08.449" level="INFO">Slept 25 seconds</msg>
+<status status="PASS" endtime="20181219 14:19:08.449" starttime="20181219 14:18:43.448"></status>
 </kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
-<doc>Waits until element specified with `locator` appears on current page.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
-<arg>xpath=//input[@type='email']</arg>
+<arg>${EMAIL_POPUP}</arg>
+<arg>${VALID_EMAIL_ID}</arg>
 </arguments>
-<status status="PASS" endtime="20181218 14:20:01.288" starttime="20181218 14:20:01.245"></status>
+<msg timestamp="20181219 14:19:08.450" level="INFO">Typing text 'v.anusha91@gmail.com' into text field '(//input[@type = "email"])[1]'.</msg>
+<status status="PASS" endtime="20181219 14:19:08.599" starttime="20181219 14:19:08.449"></status>
 </kw>
-<kw name="Input Text" library="AppiumLibrary">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
 <arguments>
-<arg>xpath=//input[@type='email']</arg>
-<arg>test@gmail.com</arg>
+<arg>${EMAIL_SUBMIT}</arg>
 </arguments>
-<msg timestamp="20181218 14:20:01.290" level="INFO">Typing text 'test@gmail.com' into text field 'xpath=//input[@type='email']'</msg>
-<status status="PASS" endtime="20181218 14:20:04.028" starttime="20181218 14:20:01.288"></status>
+<msg timestamp="20181219 14:19:08.600" level="INFO">Clicking button '(//button)[1]'.</msg>
+<status status="PASS" endtime="20181219 14:19:08.704" starttime="20181219 14:19:08.599"></status>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" endtime="20181219 14:19:08.705" starttime="20181219 14:18:43.448"></status>
+</kw>
+<kw name="Check Acknowledge Msg" library="resources_web_validEmail">
+<doc>1)Validating acknowledgement message.</doc>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
 <arguments>
-<arg>5s</arg>
+<arg>${VALID_EMAIL_ACKNOWLEDGE}</arg>
 </arguments>
-<msg timestamp="20181218 14:20:09.030" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20181218 14:20:09.031" starttime="20181218 14:20:04.028"></status>
+<assign>
+<var>${ACK_MSG}</var>
+</assign>
+<msg timestamp="20181219 14:19:08.741" level="INFO">${ACK_MSG} = Sign up to receive exclusive news, product updates, and unique ways to use Adero</msg>
+<status status="PASS" endtime="20181219 14:19:08.741" starttime="20181219 14:19:08.705"></status>
 </kw>
-<status status="PASS" endtime="20181218 14:20:09.031" starttime="20181218 14:19:24.865"></status>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${ACK_MSG}</arg>
+<arg>Sign up to receive exclusive news, product updates, and unique ways to use Adero</arg>
+</arguments>
+<status status="PASS" endtime="20181219 14:19:08.742" starttime="20181219 14:19:08.742"></status>
 </kw>
-<status status="PASS" endtime="20181218 14:20:09.031" critical="yes" starttime="20181218 14:19:24.864"></status>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Email subscription successful.</arg>
+</arguments>
+<status status="PASS" endtime="20181219 14:19:08.743" starttime="20181219 14:19:08.742"></status>
+</kw>
+<status status="PASS" endtime="20181219 14:19:08.743" starttime="20181219 14:19:08.705"></status>
+</kw>
+<kw name="Close Email popup" library="resources_web_validEmail">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CLOSE_EMAIL_POPUP}</arg>
+</arguments>
+<msg timestamp="20181219 14:19:08.744" level="INFO">Clicking element '//a[@class="close"]'.</msg>
+<status status="PASS" endtime="20181219 14:19:08.807" starttime="20181219 14:19:08.744"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181219 14:19:08.883" starttime="20181219 14:19:08.807"></status>
+</kw>
+<status status="PASS" endtime="20181219 14:19:08.883" starttime="20181219 14:19:08.743"></status>
+</kw>
+<status status="PASS" endtime="20181219 14:19:08.883" critical="yes" starttime="20181219 14:18:21.149"></status>
 </test>
-<status status="PASS" endtime="20181218 14:20:09.032" starttime="20181218 14:19:23.986"></status>
+<status status="PASS" endtime="20181219 14:19:08.884" starttime="20181219 14:18:20.913"></status>
 </suite>
 <statistics>
 <total>
@@ -68,7 +112,7 @@
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Demoapp" pass="1">Demoapp</stat>
+<stat fail="0" id="s1" name="ValidEmailSubscibe" pass="1">ValidEmailSubscibe</stat>
 </suite>
 </statistics>
 <errors>
